@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Notiq</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <header class="header">
+            <svg class="note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            <h1>Notiq</h1>
+        </header>
+
+        <main class="content">
+            <div class="setting-row">
+                <label class="label">Показать стикер</label>
+                <label class="switch">
+                    <input type="checkbox" id="toggleSticky">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+            <div class="setting-row">
+                <label class="label">Цвет стикера</label>
+                <select id="colorSelect" class="color-select">
+                    <option value="#fff740">Желтый</option>
+                    <option value="#7afcff">Голубой</option>
+                    <option value="#ff65a3">Розовый</option>
+                    <option value="#8aff80">Зеленый</option>
+                </select>
+            </div>
+
+            <button id="newNote" class="action-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                Новая заметка
+            </button>
+
+            <div class="notes-list" id="notesList">
+                <!-- Список заметок будет здесь -->
+            </div>
+        </main>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
